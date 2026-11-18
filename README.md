@@ -5,7 +5,9 @@
 《润泽说 道可道之甲骨文》是“甲骨文所有字”系列的总卷工程；按事类分卷，逐字增补，不一次写成“全部”。
 
 - 书名：润泽说 道可道之甲骨文
-- 仓库：daokedao-jiaguwen
+- 仓库：daokedao-jiaguwen（公开）
+- 仓库地址：https://github.com/q1z2q3-debug/daokedao-jiaguwen
+- 阅读站：https://q1z2q3-debug.github.io/daokedao-jiaguwen/
 - 当前：卷一至卷三十（三十卷 · 每卷十二字 · 三百六十个字位），v0.30.0
 - 卷一 · 天地人（十二字）
 - 卷二 · 身体与心（十二字）
