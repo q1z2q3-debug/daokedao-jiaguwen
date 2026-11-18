@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>甲骨文大模型研究路线：从猜字到证据生成</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141B24'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='%23F5F0E3'%3E甲%3C/text%3E%3C/svg%3E"><style>
+:root{--paper:#F5F0E3;--ink:#1F1B16;--mut:#6E6250;--line:#D5C7AE;--ochre:#A4512E;--blue:#2F4A6D;--green:#5F8C6E;--dark:#141B24}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Serif CJK SC","Songti SC","Source Han Serif SC",serif;line-height:1.8}
+.wrap{max-width:1120px;margin:0 auto;padding:54px 28px 80px}
+.eyebrow{font-size:12px;letter-spacing:.16em;color:var(--mut);margin-bottom:16px}
+h1{font-size:40px;line-height:1.25;margin:0 0 12px;font-weight:600;letter-spacing:.02em}
+.sub{font-size:16px;color:var(--mut);margin:0 0 10px}
+.meta{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--mut);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin:22px 0 38px}
+.lead{font-size:18px;line-height:1.9;border-left:3px solid var(--ochre);padding-left:18px;margin:0 0 30px}
+h2{font-size:24px;border-bottom:1px solid var(--line);padding-bottom:8px;margin:48px 0 14px}
+h3{font-size:18px;margin:26px 0 8px}
+p{font-size:15.5px;margin:0 0 14px}.small{font-size:13px;color:var(--mut)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0}
+.card{border:1px solid var(--line);padding:16px 18px;background:rgba(255,255,255,.16)}
+.card .k{font-size:12px;color:var(--mut);letter-spacing:.06em}.card .v{font-size:25px;font-weight:600;line-height:1.25;margin:6px 0}.card .s{font-size:12.5px;color:var(--mut)}
+table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13.5px;margin:12px 0 24px}
+th,td{border-bottom:1px solid var(--line);padding:9px 7px;text-align:left;vertical-align:top}th{font-size:12px;color:var(--mut);font-weight:600}
+.tag{display:inline-block;font-size:12px;padding:2px 7px;border:1px solid var(--line);color:var(--mut);white-space:nowrap}.tag.ok{color:var(--green);border-color:#AFC4B7}.tag.mid{color:var(--ochre);border-color:#D8B8A5}.tag.no{color:#8A6F6F;border-color:#D8C4C4}
+.note{background:#EDE4D2;border-left:3px solid var(--ochre);padding:14px 18px;margin:18px 0;font-size:14px}
+figure{margin:20px 0 24px}figure svg{width:100%;height:auto;display:block}figcaption{font-size:12.5px;color:var(--mut);margin-top:6px}
+.quote{font-size:17px;padding:16px 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:24px 0}
+ul{padding-left:1.25em;margin:8px 0 16px}li{font-size:15.5px;margin:6px 0}
+.lab{border:1px solid var(--line);background:#1E2630;color:#F3EAD8;padding:18px 20px;margin:18px 0;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.7;white-space:pre-wrap;overflow:auto}
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:end;margin:14px 0}
+label{font-size:12px;color:var(--mut);display:block;margin-bottom:5px}select,button{font-family:inherit;font-size:14px;padding:9px 12px;min-height:44px;border:1px solid var(--line);background:#FFF9EB;color:var(--ink)}button{cursor:pointer}button:hover{background:#EFE4CE}button.primary{background:var(--ochre);color:#FFF9EB;border-color:var(--ochre)}button.primary:hover{background:#8E4526}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1F1B16;color:#F5F0E3;padding:10px 16px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .2s;border-radius:2px;z-index:10}#toast.on{opacity:1}
+.src{font-size:12.5px;color:var(--mut);line-height:1.6}.src a{color:var(--blue)}
+@media(max-width:700px){.wrap{padding:30px 16px 60px}h1{font-size:28px}.grid{grid-template-columns:1fr}p,li{font-size:14.5px}table{font-size:12px}th,td{padding:6px 5px}.meta{gap:8px}.controls{display:block}select,button{width:100%;margin:4px 0}
+</style></head><body><div class="wrap">
+<div class="eyebrow">润泽说 · 道可道之甲骨文 · 大模型研究路线</div>
+<h1>从“猜字”到“证据生成”</h1>
+<p class="sub">把当前甲骨文智能研究、我们的 912 字位语料，和大模型的可验证能力接成一条线</p>
+<div class="meta"><span>路线页 2026-11-18</span><span>配套：甲骨文认知密度报告</span><span><a href="甲骨文认知密度-研究报告.html">打开数据报告</a></span><span><a href="甲骨文证据校验器.html">打开证据校验器</a></span></div>
+<p class="lead">大模型最值得做的，不是替人“认出一个字”，而是把散落在拓片、摹本、释文、字编里的证据组织成候选，再让另一个校验器把没有出处的候选打回去。真正能突破的，是“证据级生成”，不是“更像甲骨文的图”。</p>
+
+<h2>一、三种“认知密度”，不要混成一个数</h2>
+<table><colgroup><col style="width:17%"><col style="width:28%"><col style="width:27%"><col style="width:28%"></colgroup>
+<tr><th>维度</th><th>商代甲骨书写</th><th>现代人类</th><th>大模型</th></tr>
+<tr><td>密度落在哪</td><td>字 + 片 + 辞例 + 共同仪式知识</td><td>词 + 句 + 篇章 + 可查的外部知识</td><td>参数记忆 + 上下文窗口 + 检索到的证据</td></tr>
+<tr><td>单字负载</td><td>字形可以简，意义靠槽位和语境补</td><td>词义相对显式，靠句法消歧</td><td>token 的表征是分布式的，不等于一个义项</td></tr>
+<tr><td>解码成本</td><td>高：需字编、辞例、考古背景</td><td>中：需教育和专业训练</td><td>生成门槛低，校验成本高</td></tr>
+<tr><td>主要失败</td><td>残片、缺字、误释、以今律古</td><td>歧义、专业壁垒、记忆偏差</td><td>幻觉、过度补全、来源缺失</td></tr>
+<tr><td>能否造新字</td><td>有构件组合，但受当时体系约束</td><td>可造新词，不轻易造字形</td><td>可生成字形，必须标证据等级</td></tr></table>
+<div class="note"><b>结论：</b>“商代认知密度高”不等于“每个甲骨字都装着很多义项”。更准确的说法是：<b>它把密度放在共享的仪式语境和格式槽位里</b>；现代人把密度放在显式词汇和篇章里；大模型把密度放在参数和上下文里。三者不能用一个“熵”直接比大小。</div>
+
+<h2>二、当时的“认知词汇”实际在做什么</h2>
+<p>甲骨卜辞不是今天的散文，也不是面向大众的传播。它主要是商王室与祖先、神灵、天时之间的询问与记录：今天下雨吗、王会出行吗、田猎有获吗、某地受年吗、疾病与梦兆如何、征伐是否受佑。它的“沟通”对象首先是神祖与王室共同体，“解释”方式不是因果说明，而是卜问—验验—记事的程序。</p>
+<p>从我们这套书选字看，认知词汇落在几个很实在的语域：天象（雨、风、日、月）、农事（田、禾、年）、动物（牛、羊、犬、鹿）、战争（伐、征、狩）、祭祀（祭、燎）、身体与梦（疾、梦）、王权与贞人（王、贞、卜）。这些词不是为了“文学”，而是为了在不确定的生活里做判断：年成、出行、疾病、战争、祭祀。也正因为目的明确，格式词（贞、卜、其、于、亡）才占据了网络核心。</p>
+
+<h2>三、现在的研究到哪一步</h2>
+<div class="grid">
+<div class="card"><div class="k">字形演化底座</div><div class="v">229,170</div><div class="s">EVOBC 图像；13,714 个字形类别，跨六个历史阶段</div></div>
+<div class="card"><div class="k">拓片—摹本—释文</div><div class="v">10,077</div><div class="s">OBIMD 图像；93,652 个标注字；21,667 个缺字位置</div></div>
+<div class="card"><div class="k">多模态评测</div><div class="v">5,523</div><div class="s">OBI-Bench 图像；识别、缀合、分类、检索、释读五类任务</div></div>
+<div class="card"><div class="k">多任务语料</div><div class="v">40万+</div><div class="s">M3T-OBC 预训练语料；9,116 条人工复核推理样本</div></div>
+<div class="card"><div class="k">构件级知识</div><div class="v">1,853</div><div class="s">OB-Radix 构件图；478 个构件；1,022 个字图</div></div>
+<div class="card"><div class="k">整句理解</div><div class="v">S-OBI</div><div class="s">句级评测显示：模型从单字走向整句仍然吃力</div></div>
+</div>
+<p class="src">来源：EVOBC（arXiv:2401.12467）、OBIMD、OBI-Bench（ICLR 2025）、M3T-OBC（SciEngine 2026）、OB-Radix（ACL 2026）、S-OBI（arXiv 2026）。这些工作大多解决“识别/释读”，还没有解决“生成的字有没有证据”。</p>
+
+<h2>四、真正的四个突破口</h2>
+<h3>1. 从“猜一个答案”改成“给一组带出处的候选”</h3>
+<p>模型对未释字的最大价值，不是断言“这个字就是某字”，而是给出 Top-k 候选，并为每个候选附上：字形构件、同片辞例、字编页码/著录号、反证项。评测指标也随之改变：Top-k 命中率、来源覆盖率、专家推翻率。OBI-Bench 已经显示，模型在“释读”上能给出有创意的人类水平猜测，但细粒度感知仍低于人类；所以候选生成可以放开，断言必须收紧。</p>
+<h3>2. 从“单字识别”走到“片/句级语境”</h3>
+<p>我们的 912 字位最有价值的地方，不是字多，而是每个字都带着卷、篇、同片释文。它适合做“字—片—辞例”的证据检索：给定一个残损片段，模型先检索同片共现，再排候选，而不是只看字形。S-OBI 的结论也说明，整句级理解是当前模型的短板；谁先把“片级上下文”接进模型，谁就先突破。</p>
+<h3>3. 从“识别”走到“有约束的拟形”</h3>
+<p>“复刻未有之甲骨文”可以成立，但必须分四级：A 有拓片/摹本；B 有字形库+辞例；C 只用已见构件做类推；D 模型自由拟形。A/B 才能叫“复原”，C 只能叫“推演字”，D 只能叫“甲骨风拟字”。没有这四级，生成越像，越危险。</p>
+<h3>4. 从“准确率”走到“认知密度”</h3>
+<p>认知密度不能只用 perplexity 或字符准确率衡量。至少要有三类指标：一是同一字在不同辞例中的义项/槽位多样性；二是人类专家与模型在同一批字上的标注一致性；三是“给同样的证据，模型是否给出同样可复核的候选”。这也是我们那份 912 字位报告真正能接上的地方：它已经把“字形复杂度”和“上下文熵”分开测量了。</p>
+
+<figure><svg viewBox="0 0 960 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="证据图、模型、校验器、专家四层架构">
+<rect x="0" y="0" width="960" height="300" fill="#F5F0E3"/>
+<g font-family="Noto Serif CJK SC,serif" fill="#1F1B16">
+<rect x="30" y="80" width="190" height="120" fill="#E8DCC6" stroke="#D5C7AE"/><text x="130" y="112" text-anchor="middle" font-size="18">证据图</text><text x="130" y="142" text-anchor="middle" font-size="12" fill="#6E6250">拓片·摹本·释文</text><text x="130" y="164" text-anchor="middle" font-size="12" fill="#6E6250">字编·辞例·构件</text>
+<rect x="285" y="80" width="190" height="120" fill="#DCE6EA" stroke="#B9CBD2"/><text x="380" y="112" text-anchor="middle" font-size="18">大模型</text><text x="380" y="142" text-anchor="middle" font-size="12" fill="#4F6470">检索·候选·解释</text><text x="380" y="164" text-anchor="middle" font-size="12" fill="#4F6470">结构化输出</text>
+<rect x="540" y="80" width="190" height="120" fill="#E4E9DF" stroke="#BCCBB8"/><text x="635" y="112" text-anchor="middle" font-size="18">校验器</text><text x="635" y="142" text-anchor="middle" font-size="12" fill="#4F6458">来源·构件·补笔</text><text x="635" y="164" text-anchor="middle" font-size="12" fill="#4F6458">反证·置信度</text>
+<rect x="795" y="80" width="135" height="120" fill="#F0E0D2" stroke="#D8B8A5"/><text x="862" y="112" text-anchor="middle" font-size="18">专家</text><text x="862" y="142" text-anchor="middle" font-size="12" fill="#7A5B48">复核/否决</text>
+<g stroke="#A4512E" stroke-width="2" fill="none" marker-end="url(#arrow)">
+<line x1="220" y1="140" x2="280" y2="140"/><line x1="475" y1="140" x2="535" y2="140"/><line x1="730" y1="140" x2="790" y2="140"/>
+</g>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#A4512E"/></marker></defs>
+<text x="480" y="250" text-anchor="middle" font-size="13" fill="#6E6250">每一层都留下可复查的 id；模型不拥有最终解释权</text>
+</g></svg><figcaption>图一：证据图 → 大模型 → 校验器 → 专家。生成不是终点，能被打回才是。</figcaption></figure>
+
+<h2>五、可以直接投给模型的任务卡</h2>
+<p>下面这个生成器不替你“解释甲骨文”，它把已有字位、同片节录和任务边界压成一张可复用的 LLM 任务卡。选一个字、选任务类型，复制给模型即可。任务卡里的释文是清洗节录，只作检索线索，不代替重新释读。</p>
+<div class="controls"><div><label for="charSel">字位</label><select id="charSel"></select></div><div><label for="taskSel">任务类型</label><select id="taskSel"><option value="identify">字形识别与候选</option><option value="context">同片语境与槽位</option><option value="compose">构件拟形（D 级）</option><option value="verify">来源核验与反证</option></select></div><button class="primary" id="makeBtn">生成任务卡</button><button id="copyBtn">复制</button></div>
+<div class="lab" id="cardOut">选择字位与任务类型，生成一张任务卡。</div>
+<div id="toast" role="status">已复制</div>
+
+<h2>六、生成“未有之甲骨文”的硬规则</h2>
+<ul><li><b>分级：</b>A 拓片/摹本；B 字形库+辞例；C 已见构件类推；D 自由拟形。输出必须带 level，不允许把 C/D 写成“复原”。</li><li><b>不补笔：</b>残损、断口、缺笔保留；模型可以提“可能补笔”，但必须另开字段，不能混进描摹层。</li><li><b>不冒充：</b>不得写“新出土”“原拓”“商代新字”；只能写“拟形/推演字/待核”。</li><li><b>可反证：</b>每个候选至少给一条能推翻它的证据类型：构件不通、辞例不合、时代不合、来源缺失。</li></ul>
+<div class="lab">{
+  "target": "概念 / 缺字 / 残片",
+  "candidates": [{
+    "glyph_svg": "…",
+    "components": ["已见构件1", "已见构件2"],
+    "reading": "…",
+    "meaning": "…",
+    "evidence": [{"source": "EVOBC / OBIMD / 字编 / 本库", "id": "…", "url": "…"}],
+    "level": "A|B|C|D",
+    "confidence": 0.0,
+    "counter_evidence": ["…"]
+  }],
+  "verifier": {"source_coverage": 0.0, "component_valid": false, "damage_policy": "no补笔", "review_required": true}
+}</div>
+
+<h2>七、三十天可执行计划</h2>
+<table><colgroup><col style="width:18%"><col style="width:42%"><col style="width:40%"></colgroup>
+<tr><th>阶段</th><th>做什么</th><th>验收</th></tr>
+<tr><td>第 1 周</td><td>把 912 字位、同片释文、SVG、卷/篇做成证据表；接入 EVOBC/OBIMD 的公开字段</td><td>每个字有 source_id；无来源字段为 0</td></tr>
+<tr><td>第 2 周</td><td>做 20 字试点：每字 3 个候选、来源、构件、反证；三人独立复核</td><td>Top-3 命中率、来源覆盖率、专家推翻率</td></tr>
+<tr><td>第 3 周</td><td>做“残片补全”与“构件拟形”两组任务；D 级单独隔离</td><td>补笔违规率 = 0；D 级不进入“复原”集</td></tr>
+<tr><td>第 4 周</td><td>把任务卡、评分脚本、错误案例公开；写一份“模型能做什么/不能做什么”</td><td>可复现；外部研究者能跑同一批题</td></tr></table>
+
+<div class="quote">一句话：让大模型做“候选的放大器”，不要做“结论的替身”。它可以把 912 个字位变成一千条可检验的假设；但每条假设都要能回到片、回到辞、回到出处。</div>
+<footer>配套数据报告：<a href="甲骨文认知密度-研究报告.html">甲骨文认知密度-研究报告.html</a> · 任务卡基于 912 字位中的 17 个语域样本 · 2026-11-18</footer>
+</div>
+<script>
+const CARDS=[{"c": "雨", "v": 1, "t": "天地人", "ctx": "辛丑卜…贞帚好适子…王这曰好其适子…不雨帝隹兹邑龙不若"}, {"c": "风", "v": 7, "t": "天象与灾异", "ctx": "贞下示受逷告于上甲犬一南一…于丁牛一豖三…风允"}, {"c": "日", "v": 1, "t": "天地人", "ctx": "王这曰…七日己巳允适来遖自西…友角告曰…"}, {"c": "月", "v": 1, "t": "天地人", "ctx": "小告…卜贞旬亡遽…癸卯卜争贞旬亡遽…"}, {"c": "田", "v": 11, "t": "农事与田猎", "ctx": "卜颟贞才铫田…受年一贞商不一"}, {"c": "禾", "v": 11, "t": "农事与田猎", "ctx": "一羊受禾大吉…用禾逃矸"}, {"c": "年", "v": 11, "t": "农事与田猎", "ctx": "戊寅贞来岁大邑受禾才六月卜不受禾…"}, {"c": "疾", "v": 7, "t": "天象与灾异", "ctx": "癸酉卜自今至丁丑其雨不…自今至丁丑不其雨允不…"}, {"c": "梦", "v": 7, "t": "天象与灾异", "ctx": "贞多鬼梦汾见一贞多鬼梦汾言见…"}, {"c": "牛", "v": 6, "t": "自然与动物", "ctx": "贞成日二牛二二贞成日三牛"}, {"c": "羊", "v": 6, "t": "自然与动物", "ctx": "甲午卜争贞贮其适遽一贞贮亡遽…"}, {"c": "犬", "v": 6, "t": "自然与动物", "ctx": "贞适于母秕犬三羊三豕卯一"}, {"c": "鹿", "v": 6, "t": "自然与动物", "ctx": "贞乎冓逐鹿于丧支"}, {"c": "伐", "v": 9, "t": "战争与刑罚", "ctx": "戊寅卯颟贞连伐翌庚辰用"}, {"c": "祭", "v": 8, "t": "祭祀与信仰", "ctx": "镾祭"}, {"c": "王", "v": 10, "t": "王与臣", "ctx": "王这曰…七日己巳允适来遖…王这曰…五日丁酉允适来遖自西沚速告"}, {"c": "贞", "v": 57, "t": "鬼神与祭享", "ctx": "丙戌卜送贞令众逖其受适年一二三四五贞乎雷耤于明…"}];
+const charSel=document.getElementById('charSel'),taskSel=document.getElementById('taskSel'),out=document.getElementById('cardOut');
+CARDS.forEach(c=>{const o=document.createElement('option');o.value=c.c;o.textContent=c.c+' · 卷'+c.v+' · '+c.t;charSel.appendChild(o);});
+function clip(t){const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(a);const toast=document.getElementById('toast');toast.classList.add('on');setTimeout(()=>toast.classList.remove('on'),1200);}
+function card(){
+ const c=CARDS.find(x=>x.c===charSel.value)||CARDS[0]; const t=taskSel.value; const base=`你是甲骨文研究助手。只允许基于下列证据作答；没有证据的地方写“未检出”，不得补笔、不得冒充原拓或出土材料。\n\n【证据】\n字位：${c.c}\n卷/篇：卷${c.v} · ${c.t}\n同片释文（清洗节录，仅作检索线索）：${c.ctx}\n\n【任务】\n`;
+ let task='';
+ if(t==='identify') task='给出该字最可能的现代字 Top-3 候选；每个候选列：字形构件、同片辞例、可能的反证。最后给出“证据等级 A/B/C/D”。';
+ if(t==='context') task='说明该字在这条同片释文中最可能占据的句法/语义槽位；列出左右邻字；指出哪些判断只是猜测。';
+ if(t==='compose') task='为一个现代概念设计 3 个构件组合候选；只能使用已见构件；每个候选标 level=D，并写“拟形，不是复原”。';
+ if(t==='verify') task='检查“该字=某现代字”这一断言：列出支持证据、反证、缺失来源；给出 review_required。';
+ return base+task+'\n\n【输出 JSON】\n{"target":"...","candidates":[{"glyph_svg":"...","components":["..."],"reading":"...","meaning":"...","evidence":[{"source":"...","id":"..."}],"level":"A|B|C|D","confidence":0.0,"counter_evidence":["..."]}],"verifier":{"source_coverage":0.0,"component_valid":false,"damage_policy":"no补笔","review_required":true}';
+}
+function render(){out.textContent=card();}
+document.getElementById('makeBtn').addEventListener('click',render);
+document.getElementById('copyBtn').addEventListener('click',()=>clip(out.textContent));
+charSel.addEventListener('change',render);taskSel.addEventListener('change',render);render();
+</script></body></html>
