@@ -1,0 +1,150 @@
+{
+ "卷": "六十七",
+ "title": "字族与遗珠",
+ "entries": [
+  {
+   "卷": "六十七",
+   "序号": 1,
+   "字": "冄",
+   "kind": "new",
+   "pm": "合28078",
+   "sid": "138323",
+   "sw": "a16辛…冉〔束〕…冓b02遥a08…夕…",
+   "image": "rubbings67/01-冄.jpg",
+   "glyph": "glyphs/5184-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十七",
+   "序号": 2,
+   "字": "冉",
+   "kind": "new",
+   "pm": "合28078",
+   "sid": "138323",
+   "sw": "a16辛…冉〔束〕…冓b02遥a08…夕…",
+   "image": "rubbings67/02-冉.jpg",
+   "glyph": "glyphs/5189-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十七",
+   "序号": 3,
+   "字": "夸",
+   "kind": "new",
+   "pm": "合30691",
+   "sid": "135210",
+   "sw": "a12(1) 辛酉…\r\na04(2) b02汾a02典b02陰a06用。\r\na10(3) 戊，王b02汾a06宫。\r\na12(4) 于丧。",
+   "image": "rubbings67/03-夸.jpg",
+   "glyph": "glyphs/5938-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十七",
+   "序号": 4,
+   "字": "釆",
+   "kind": "new",
+   "pm": "合27582",
+   "sid": "137926",
+   "sw": "a14(1) 乙丑卜，其b02适a10岁于二司一b02锪a04。\r\na12(2) …牡。",
+   "image": "rubbings67/04-釆.jpg",
+   "glyph": "glyphs/91C6-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十七",
+   "序号": 5,
+   "字": "陽",
+   "kind": "new",
+   "pm": "合14855",
+   "sid": "124624",
+   "sw": "a10(1) …多射b02锳a02…c02櫙a10…八月。\na18(2) 癸丑卜，争，贞b02适c02萆a24伐自上甲至于多〔毓〕。\na08(3) 贞…b02逷a04…",
+   "image": "rubbings67/05-陽.jpg",
+   "glyph": "glyphs/967D-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十七",
+   "序号": 6,
+   "字": "驟",
+   "kind": "new",
+   "pm": "合13360",
+   "sid": "172942",
+   "sw": "a06丁酉大b02鉢a12风。十月。",
+   "image": "rubbings67/06-驟.jpg",
+   "glyph": "glyphs/9A5F-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十七",
+   "序号": 7,
+   "字": "𢅜",
+   "kind": "new",
+   "pm": "合21564",
+   "sid": "132147",
+   "sw": "a08丁酉卜，b02鎘a04，贞b02泖a10多子□。",
+   "image": "rubbings67/07-𢅜.jpg",
+   "glyph": "glyphs/2215C-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；EVOBC 矢量化"
+  },
+  {
+   "卷": "六十七",
+   "序号": 8,
+   "字": "埜",
+   "kind": "new",
+   "pm": "合22027",
+   "sid": "132577",
+   "sw": "a12乙。  埜。",
+   "image": "rubbings67/08-埜.jpg",
+   "glyph": "glyphs/57DC-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；EVOBC 矢量化"
+  },
+  {
+   "卷": "六十七",
+   "序号": 9,
+   "字": "姃",
+   "kind": "new",
+   "pm": "合2803",
+   "sid": "171504",
+   "sw": "a06帚姃…b02逩a04。",
+   "image": "rubbings67/09-姃.jpg",
+   "glyph": "glyphs/59C3-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十七",
+   "序号": 10,
+   "字": "婪",
+   "kind": "new",
+   "pm": "合10298",
+   "sid": "119968",
+   "sw": "a16…婪〔支〕鹿。",
+   "image": "rubbings67/10-婪.jpg",
+   "glyph": "glyphs/5A6A-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十七",
+   "序号": 11,
+   "字": "斿",
+   "kind": "new",
+   "pm": "合17804",
+   "sid": "128283",
+   "sw": "a14…斿…  二告",
+   "image": "rubbings67/11-斿.jpg",
+   "glyph": "glyphs/65BF-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；EVOBC 矢量化"
+  },
+  {
+   "卷": "六十七",
+   "序号": 12,
+   "字": "栕",
+   "kind": "new",
+   "pm": "合18412",
+   "sid": "128006",
+   "sw": "a02…b02鉜a12…不…  二",
+   "image": "rubbings67/12-栕.jpg",
+   "glyph": "glyphs/6815-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；EVOBC 矢量化"
+  }
+ ]
+}

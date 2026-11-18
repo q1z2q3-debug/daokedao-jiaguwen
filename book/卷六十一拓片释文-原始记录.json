@@ -1,0 +1,150 @@
+{
+ "卷": "六十一",
+ "title": "手作与器用",
+ "entries": [
+  {
+   "卷": "六十一",
+   "序号": 1,
+   "字": "扔",
+   "kind": "new",
+   "pm": "合21050",
+   "sid": "131663",
+   "sw": "a12(1) 癸未卜，b02釜a08令羌匕石b02透b02适a08扔友。\r\na14(2) 癸未卜，贞b02錯a06弗疾，b02适a04疾，b02遽a06凡。",
+   "image": "rubbings61/01-扔.jpg",
+   "glyph": "glyphs/6254-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十一",
+   "序号": 2,
+   "字": "拕",
+   "kind": "new",
+   "pm": "合4890",
+   "sid": "171795",
+   "sw": "a11(1)乙未。\r\na11(2)令冓。\r\na15(3)〔贞〕勿令〔b02冓a04〕比b02鋷a04。",
+   "image": "rubbings61/02-拕.jpg",
+   "glyph": "glyphs/62D5-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十一",
+   "序号": 3,
+   "字": "攴",
+   "kind": "new",
+   "pm": "合27742",
+   "sid": "138087",
+   "sw": "a20(1) □□□令监凡。\r\na04(2) b02汾c02楥a10、□令。\r\na12(3) 丁卯卜，b02汾c02楥a04…\r\na06(4) …b02汾c02楥a02、b02骠a10令监凡。",
+   "image": "rubbings61/03-攴.jpg",
+   "glyph": "glyphs/6534-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十一",
+   "序号": 4,
+   "字": "戓",
+   "kind": "new",
+   "pm": "合32764",
+   "sid": "142818",
+   "sw": "a24(1) □□，贞…帚井…比沚b02遢a04。\r\na14(2) 己…  一",
+   "image": "rubbings61/04-戓.jpg",
+   "glyph": "glyphs/6213-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；EVOBC 矢量化"
+  },
+  {
+   "卷": "六十一",
+   "序号": 5,
+   "字": "彈",
+   "kind": "new",
+   "pm": "合4733",
+   "sid": "114499",
+   "sw": "a12贞乎丘勿。",
+   "image": "rubbings61/05-彈.jpg",
+   "glyph": "glyphs/5F48-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十一",
+   "序号": 6,
+   "字": "戶",
+   "kind": "new",
+   "pm": "合32833",
+   "sid": "142890",
+   "sw": "a10(1) …祖…b02邾a04…\r\na28(2) 己卯卜，取岳，雨。  三\r\na20(3) 壬午卜，岳来，于b02汬b02鐜a04。\r\na20(4) 岳于三户。  一\r\na20(5) □□，〔贞〕王令c02烿a22以子方乃奠于并。  三",
+   "image": "rubbings61/06-戶.jpg",
+   "glyph": "glyphs/6236-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十一",
+   "序号": 7,
+   "字": "帀",
+   "kind": "new",
+   "pm": "合26845",
+   "sid": "137256",
+   "sw": "a26(1) 辛亥〔卜〕，□，贞于…b02适a04…\r\na12(2) 贞旧…",
+   "image": "rubbings61/07-帀.jpg",
+   "glyph": "glyphs/5E00-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十一",
+   "序号": 8,
+   "字": "函",
+   "kind": "new",
+   "pm": "合28373",
+   "sid": "138837",
+   "sw": "a02…b02遧b02闃a10麋。  吉",
+   "image": "rubbings61/08-函.jpg",
+   "glyph": "glyphs/51FD-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十一",
+   "序号": 9,
+   "字": "闔",
+   "kind": "new",
+   "pm": "合4853",
+   "sid": "171757",
+   "sw": "a08庚辰卜，b02送a06，贞令b02適a02门b02邉c02珝b02邉a08商采。",
+   "image": "rubbings61/09-闔.jpg",
+   "glyph": "glyphs/95D4-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十一",
+   "序号": 10,
+   "字": "冕",
+   "kind": "new",
+   "pm": "合33069",
+   "sid": "143053",
+   "sw": "a22(1) 丁酉卜，今生十月王b02遘b02镛a04，受b02适a08。  五\na08(2) 弗受b02适a04。\na10(3) 己亥…b02配a02…b02鍣a16，王伐归，若。\na14(4) 己亥卜，王b02遘b02镛a14，今十月，受〔b02适a06〕。\na08(5) 弗受b02适a04。\na20(6) 庚子卜，伐归，受b02适a14。八月。  五\na18(7) 弗伐归。  五\na18(8) 壬子卜，贞步，b02逪a02亡b02遽a08。  五\na04(9) b02适b02遽a08。  五\na13(10) 壬子卜，b02逞a14，翌日癸丑。\na15(11) 免示廿。\na19(12) 己亥…十月。",
+   "image": "rubbings61/10-冕.jpg",
+   "glyph": "glyphs/5195-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十一",
+   "序号": 11,
+   "字": "耋",
+   "kind": "new",
+   "pm": "合17938",
+   "sid": "124809",
+   "sw": "a18贞…戊…耋…  二",
+   "image": "rubbings61/11-耋.jpg",
+   "glyph": "glyphs/800B-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十一",
+   "序号": 12,
+   "字": "輦",
+   "kind": "new",
+   "pm": "合29693",
+   "sid": "139916",
+   "sw": "a14(1) 壬申卜…\r\na04(2) b02遐c02瓒a04。\r\na08(3) 其乎b02醴a04辇，b02适a06正。\r\na18(4) 王其商，于之，b02适a06正。\r\na06(5) 其b02雴a04马，b02适a06正。\r\na04(6) b02遐b02雴a04。",
+   "image": "rubbings61/12-輦.jpg",
+   "glyph": "glyphs/8F26-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  }
+ ]
+}

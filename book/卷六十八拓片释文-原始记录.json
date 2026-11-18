@@ -1,0 +1,150 @@
+{
+ "卷": "六十八",
+ "title": "残文与重读",
+ "entries": [
+  {
+   "卷": "六十八",
+   "序号": 1,
+   "字": "汜",
+   "kind": "new",
+   "pm": "合8367",
+   "sid": "113280",
+   "sw": "a08…汜…",
+   "image": "rubbings68/01-汜.jpg",
+   "glyph": "glyphs/6C5C-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十八",
+   "序号": 2,
+   "字": "洀",
+   "kind": "new",
+   "pm": "合11479",
+   "sid": "121232",
+   "sw": "a12…日…洀…",
+   "image": "rubbings68/02-洀.jpg",
+   "glyph": "glyphs/6D00-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十八",
+   "序号": 3,
+   "字": "畐",
+   "kind": "new",
+   "pm": "合30948",
+   "sid": "140929",
+   "sw": "b02遐b02鄡a02，b02适a06…。",
+   "image": "rubbings68/03-畐.jpg",
+   "glyph": "glyphs/7550-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十八",
+   "序号": 4,
+   "字": "畕",
+   "kind": "new",
+   "pm": "合40021",
+   "sid": "149584",
+   "sw": "a04…于b02鍰a04。",
+   "image": "rubbings68/04-畕.jpg",
+   "glyph": "glyphs/7555-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十八",
+   "序号": 5,
+   "字": "臬",
+   "kind": "new",
+   "pm": "合10744",
+   "sid": "118729",
+   "sw": "a06…乎取b02遀a04…",
+   "image": "rubbings68/05-臬.jpg",
+   "glyph": "glyphs/81EC-0A00-000001.svg",
+   "source": "殷契文渊 AynuBone/Search + LoadSwPic；hanzi-glyphs-svg JGW"
+  },
+  {
+   "卷": "六十八",
+   "序号": 6,
+   "字": "天",
+   "kind": "read",
+   "pm": "合22453",
+   "sid": "",
+   "sw": "",
+   "image": "rubbings68/06-天.jpg",
+   "glyph": "",
+   "source": "前卷重读；前卷原页拓片与释文"
+  },
+  {
+   "卷": "六十八",
+   "序号": 7,
+   "字": "人",
+   "kind": "read",
+   "pm": "合43",
+   "sid": "",
+   "sw": "",
+   "image": "rubbings68/07-人.jpg",
+   "glyph": "",
+   "source": "前卷重读；前卷原页拓片与释文"
+  },
+  {
+   "卷": "六十八",
+   "序号": 8,
+   "字": "心",
+   "kind": "read",
+   "pm": "合11424正",
+   "sid": "",
+   "sw": "",
+   "image": "rubbings68/08-心.jpg",
+   "glyph": "",
+   "source": "前卷重读；前卷原页拓片与释文"
+  },
+  {
+   "卷": "六十八",
+   "序号": 9,
+   "字": "德",
+   "kind": "read",
+   "pm": "合20548",
+   "sid": "",
+   "sw": "a06(1) …b02逬a04…十b02适a04…\na14(2) 己巳卜…其b02逨a12降。六月。",
+   "image": "rubbings68/09-德.jpg",
+   "glyph": "",
+   "source": "前卷重读；前卷原页拓片与释文"
+  },
+  {
+   "卷": "六十八",
+   "序号": 10,
+   "字": "和",
+   "kind": "read",
+   "pm": "合1240",
+   "sid": "",
+   "sw": "a11(1)□巳卜，b02送a16，贞…其…  一\na11(2)贞上甲龢b02邉a06唐。",
+   "image": "rubbings68/10-和.jpg",
+   "glyph": "",
+   "source": "前卷重读；前卷原页拓片与释文"
+  },
+  {
+   "卷": "六十八",
+   "序号": 11,
+   "字": "生",
+   "kind": "read",
+   "pm": "合20143",
+   "sid": "",
+   "sw": "a16(1) 癸丑〔卜〕，c02萉a06，贞…b02铝a04…\na26(2) 庚□卜，□，贞…  一",
+   "image": "rubbings68/11-生.jpg",
+   "glyph": "",
+   "source": "前卷重读；前卷原页拓片与释文"
+  },
+  {
+   "卷": "六十八",
+   "序号": 12,
+   "字": "易",
+   "kind": "read",
+   "pm": "合9465",
+   "sid": "",
+   "sw": "a12(1) 乙卯卜，b02遾a14，贞勿易牛。\na14(2) 贞易牛。\na14(3) 贞易牛。\na20(4) 贞翌丙辰不雨。\n……",
+   "image": "rubbings68/12-易.jpg",
+   "glyph": "",
+   "source": "前卷重读；前卷原页拓片与释文"
+  }
+ ]
+}
