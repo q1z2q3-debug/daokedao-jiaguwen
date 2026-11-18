@@ -90,7 +90,20 @@ label{font-size:12px;color:var(--mut);display:block;margin-bottom:5px}select,but
 <div class="lab" id="cardOut">选择字位与任务类型，生成一张任务卡。</div>
 <div id="toast" role="status">已复制</div>
 
-<h2>六、生成“未有之甲骨文”的硬规则</h2>
+<h2>六、首轮落地结果：30 题、一个下限、一个校验器</h2>
+<p>这不是“模型排行榜”，是把“出处”压进任务后的第一次可复算落地。30 题已生成，评分器与共现基线已跑通；校验器可接收任意模型输出，先做形式与出处检查。</p>
+<table><thead><tr><th>指标</th><th>结果</th><th>读法</th></tr></thead><tbody>
+<tr><td>题量</td><td>30</td><td>10 字形 / 10 缺字 / 5 共现 / 5 拟形</td></tr>
+<tr><td>Top-1</td><td>0.15</td><td>共现基线，20 道可排名题中命中 3</td></tr>
+<tr><td>Top-3</td><td>0.25</td><td>共现基线，20 道中命中 5</td></tr>
+<tr><td>同片共现 Top-3 重叠</td><td>0.733</td><td>5 道 network 题的平均集合重叠</td></tr>
+<tr><td>出处覆盖</td><td>0.833</td><td>5 道 compose 无出处，按 0 计；其余 25 道满分</td></tr>
+<tr><td>Schema 通过</td><td>1.00</td><td>基线也按格式输出，说明格式不是难点</td></tr>
+<tr><td>红线 / 补笔违规</td><td>0 / 0</td><td>只证明基线守规则，不证明它释读正确</td></tr>
+</tbody></table>
+<div class="note"><b>结论：</b>左右邻字与全局共现只能给到 Top-3 0.25。这个下限说明，真正的突破不在“再多猜几个”，而在“把字形、辞例、构件、反证同时放到候选里”，让专家能复核。下一步应让真实模型跑同一套题，而不是换一套更漂亮的题。</div>
+<p><a href="甲骨文证据校验器.html">打开证据校验器</a>　·　<a href="benchmark/README.md">读 30 题基准与评分口径</a></p>
+<h2>七、生成“未有之甲骨文”的硬规则</h2>
 <ul><li><b>分级：</b>A 拓片/摹本；B 字形库+辞例；C 已见构件类推；D 自由拟形。输出必须带 level，不允许把 C/D 写成“复原”。</li><li><b>不补笔：</b>残损、断口、缺笔保留；模型可以提“可能补笔”，但必须另开字段，不能混进描摹层。</li><li><b>不冒充：</b>不得写“新出土”“原拓”“商代新字”；只能写“拟形/推演字/待核”。</li><li><b>可反证：</b>每个候选至少给一条能推翻它的证据类型：构件不通、辞例不合、时代不合、来源缺失。</li></ul>
 <div class="lab">{
   "target": "概念 / 缺字 / 残片",
@@ -107,7 +120,7 @@ label{font-size:12px;color:var(--mut);display:block;margin-bottom:5px}select,but
   "verifier": {"source_coverage": 0.0, "component_valid": false, "damage_policy": "no补笔", "review_required": true}
 }</div>
 
-<h2>七、三十天可执行计划</h2>
+<h2>八、三十天可执行计划</h2>
 <table><colgroup><col style="width:18%"><col style="width:42%"><col style="width:40%"></colgroup>
 <tr><th>阶段</th><th>做什么</th><th>验收</th></tr>
 <tr><td>第 1 周</td><td>把 912 字位、同片释文、SVG、卷/篇做成证据表；接入 EVOBC/OBIMD 的公开字段</td><td>每个字有 source_id；无来源字段为 0</td></tr>
