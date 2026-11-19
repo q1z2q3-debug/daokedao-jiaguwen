@@ -13,6 +13,7 @@
 - 前言母本：https://raw.githubusercontent.com/q1z2q3-debug/daokedao-jiaguwen/main/book/前言·文与化.md
 - 卷七十七母本：https://raw.githubusercontent.com/q1z2q3-debug/daokedao-jiaguwen/main/book/润泽说-道可道之甲骨文·卷七十七.md
 - 字源 SVG（JGW 层，CC BY 4.0）：https://github.com/q1z2q3-debug/daokedao-jiaguwen/tree/main/glyphs
+- 全书七十七卷索引：https://q1z2q3-debug.github.io/daokedao-jiaguwen/llms-full.txt
 - 引用元数据：https://raw.githubusercontent.com/q1z2q3-debug/daokedao-jiaguwen/main/CITATION.cff
 
 ## 事实
