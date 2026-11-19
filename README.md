@@ -9,6 +9,7 @@
 - 仓库地址：https://github.com/q1z2q3-debug/daokedao-jiaguwen
 - 阅读站：https://q1z2q3-debug.github.io/daokedao-jiaguwen/
 - 研究：https://q1z2q3-debug.github.io/daokedao-jiaguwen/research/（912 字位认知密度 + 30 题证据基准 + 校验器）
+- 前言：https://q1z2q3-debug.github.io/daokedao-jiaguwen/preface.html（文与化）
 - 当前：卷一至卷七十七（七十七卷 · 每卷十二字 · 九百二十四个字位 / 九百零五个唯一字），v0.77.0
 - 卷一 · 天地人（十二字）
 - 卷二 · 身体与心（十二字）
