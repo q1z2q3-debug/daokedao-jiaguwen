@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "若引用本书，请用下列格式。"
+title: "润泽说 道可道之甲骨文"
+abstract: "以甲骨拓片、同片释文与字源为证据链，逐字解读甲骨文；七十七卷，每卷十二字，分本字、借字、后起字，附甲骨 SVG 复写。"
+authors:
+  - name: "润泽"
+date-released: 2026-11-20
+version: 0.77.0
+license: CC-BY-NC-SA-4.0
+repository-code: "https://github.com/q1z2q3-debug/daokedao-jiaguwen"
+url: "https://q1z2q3-debug.github.io/daokedao-jiaguwen/"
+type: book
+language: "zh"

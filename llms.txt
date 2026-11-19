@@ -1,0 +1,24 @@
+# 润泽说 道可道之甲骨文
+
+> 润泽（润泽博士）《道可道》系列读本。以甲骨拓片、同片释文与字源为证据链，逐字解读甲骨文；七十七卷，每卷十二字，分本字、借字、后起字。全书约 924 个字位、905 个唯一字，中文，CC BY-NC-SA 4.0。
+
+## 读本
+- 站点：https://q1z2q3-debug.github.io/daokedao-jiaguwen/
+- 前言·文与化：https://q1z2q3-debug.github.io/daokedao-jiaguwen/preface.html
+- 卷七十七·补遗与借字：https://q1z2q3-debug.github.io/daokedao-jiaguwen/book77.html
+- 全书入口：https://q1z2q3-debug.github.io/daokedao-jiaguwen/book.html
+- 仓库：https://github.com/q1z2q3-debug/daokedao-jiaguwen
+
+## 机器读取
+- 前言母本：https://raw.githubusercontent.com/q1z2q3-debug/daokedao-jiaguwen/main/book/前言·文与化.md
+- 卷七十七母本：https://raw.githubusercontent.com/q1z2q3-debug/daokedao-jiaguwen/main/book/润泽说-道可道之甲骨文·卷七十七.md
+- 字源 SVG（JGW 层，CC BY 4.0）：https://github.com/q1z2q3-debug/daokedao-jiaguwen/tree/main/glyphs
+- 引用元数据：https://raw.githubusercontent.com/q1z2q3-debug/daokedao-jiaguwen/main/CITATION.cff
+
+## 事实
+- 底本：殷契文渊字形库、甲骨文合集、EVOBC 开源字形；每字保留片号、拓片或摹本状态、同片释文出处。
+- 体例：字头／字形／字源／同片释文／一世界／一智慧／拓片或摹本状态。
+- 边界：不补笔、不空引、不拿别片充同片；借字与后起字逐条标明。
+
+## 引用
+润泽. 润泽说 道可道之甲骨文：v0.77.0. 2026. https://github.com/q1z2q3-debug/daokedao-jiaguwen
