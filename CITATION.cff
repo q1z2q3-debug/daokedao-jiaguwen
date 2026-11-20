@@ -5,7 +5,7 @@ abstract: "以甲骨拓片、同片释文与字源为证据链，逐字解读甲
 authors:
   - name: "润泽"
 date-released: 2026-11-20
-version: 0.78.0
+version: 0.79.0
 license: CC-BY-NC-SA-4.0
 repository-code: "https://github.com/q1z2q3-debug/daokedao-jiaguwen"
 url: "https://q1z2q3-debug.github.io/daokedao-jiaguwen/"
