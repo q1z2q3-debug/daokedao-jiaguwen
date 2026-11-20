@@ -30,13 +30,18 @@ CN_NUM = "一二三四五六七八九十"
 
 
 def vol_num(name):
-    m = re.search(r"卷(十[一二]|十|[一二三四五六七八九])", name)
+    """把“卷二十一”“卷七十七”一类卷名转成阿拉伯数字。"""
+    m = re.search(r"卷([一二三四五六七八九十]+)", name)
     if not m:
         raise SystemExit(f"无法从卷名取卷号：{name}")
+    d = {"一": 1, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8, "九": 9}
     s = m.group(1)
-    d = {"一": 1, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8, "九": 9,
-         "十": 10, "十一": 11}
-    return d[s]
+    if "十" not in s:
+        return d[s]
+    left, _, right = s.partition("十")
+    tens = d[left] if left else 1
+    ones = d[right] if right else 0
+    return tens * 10 + ones
 
 
 def patch_md(path, details):
@@ -128,9 +133,26 @@ def main():
     details = {d["char"]: d["text"] for d in raw}
     md_n = patch_md(md, details)
     html_n = patch_html(htm, details)
+    # 保留站点镜像原有 SEO 元信息：先把它并回阅读版，再整文件复制，
+    # 这样 docs 与阅读版一致，同时 canonical / OG / JSON-LD 不丢。
+    seo_note = "unchanged"
+    if os.path.exists(docs):
+        doc = open(docs, encoding="utf-8").read()
+        link = doc.find('<link rel="canonical"')
+        end = doc.find('</script>', link) + len('</script>') if link >= 0 else -1
+        if link >= 0 and end > link:
+            blk = doc[link:end].replace("一字一世界 · 一字一智慧",
+                                        "一图一字 · 一字一详解 · 一字一世界 · 一字一智慧")
+            body = open(htm, encoding="utf-8").read()
+            if 'rel="canonical"' not in body:
+                body = body.replace("</head>", blk + "</head>", 1)
+                open(htm, "w", encoding="utf-8").write(body)
+                seo_note = "injected"
+            else:
+                seo_note = "already-present"
     shutil.copyfile(htm, docs)
 
-    report = {"vol": a.vol, "md_patched": md_n, "html_patched": html_n,
+    report = {"vol": a.vol, "md_patched": md_n, "html_patched": html_n, "seo": seo_note,
               "duplicate_chars": dups, "docs": docs,
               "md": md, "html": htm}
     print(json.dumps(report, ensure_ascii=False, indent=2))
