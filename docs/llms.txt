@@ -4,9 +4,11 @@
 
 ## 读本
 - 站点：https://q1z2q3-debug.github.io/daokedao-jiaguwen/
+- 全书目录（77 卷）：https://q1z2q3-debug.github.io/daokedao-jiaguwen/
 - 前言·文与化：https://q1z2q3-debug.github.io/daokedao-jiaguwen/preface.html
 - 卷七十七·补遗与借字：https://q1z2q3-debug.github.io/daokedao-jiaguwen/book77.html
-- 全书入口：https://q1z2q3-debug.github.io/daokedao-jiaguwen/book.html
+- 卷页示例：https://q1z2q3-debug.github.io/daokedao-jiaguwen/volumes/v01.html
+- 旧版单卷页（卷七十六）：https://q1z2q3-debug.github.io/daokedao-jiaguwen/book.html
 - 仓库：https://github.com/q1z2q3-debug/daokedao-jiaguwen
 
 ## 机器读取
