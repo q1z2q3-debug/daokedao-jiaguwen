@@ -156,7 +156,12 @@ def main():
               "duplicate_chars": dups, "docs": docs,
               "md": md, "html": htm}
     print(json.dumps(report, ensure_ascii=False, indent=2))
-    if md_n != 12 or html_n != 12:
+    md_total = open(md, encoding="utf-8").read().count("**详解**")
+    html_total = open(htm, encoding="utf-8").read().count('<div class="label">详解</div>')
+    if md_n != len(details) or html_n != len(details) or md_total != 12 or html_total != 12:
+        print(json.dumps({"md_patched": md_n, "html_patched": html_n,
+                          "md_total": md_total, "html_total": html_total,
+                          "expected": len(details)}, ensure_ascii=False))
         sys.exit(1)
 
 
