@@ -1,0 +1,65 @@
+{
+  "slug": "jiaguwen",
+  "out": "daokedao-jiaguwen",
+  "package": "com.runze.daokedaojiaguwen",
+  "app_name": "道可道之甲骨文",
+  "version_code": 80000,
+  "version_name": "0.80.0",
+  "docs": "docs",
+  "entry": "index.html",
+  "copy_files": [
+    "index.html",
+    "book.html",
+    "book77.html",
+    "appendix.html",
+    "preface.html",
+    "ai.txt",
+    "llms.txt"
+  ],
+  "copy_dirs": [
+    [
+      "volumes",
+      [
+        "_shots"
+      ]
+    ],
+    [
+      "research",
+      []
+    ]
+  ],
+  "site_prefixes": [
+    "https://q1z2q3-debug.github.io/daokedao-jiaguwen/",
+    "https://q1z2q3-debug.github.io/daokedao-jiaguwen",
+    "/daokedao-jiaguwen/"
+  ],
+  "bare_index_fix": true,
+  "strip_blocks": [
+    [
+      "<!-- apk-dl:start -->",
+      "<!-- apk-dl:end -->"
+    ]
+  ],
+  "strip_hrefs": [
+    "sitemap.xml"
+  ],
+  "strip_link_regex": [
+    "fonts/css2"
+  ],
+  "font": {
+    "family": "Noto Serif CJK SC",
+    "weights": {
+      "400": [
+        "/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc",
+        2
+      ],
+      "700": [
+        "/usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc",
+        2
+      ]
+    },
+    "aliases": [
+      "Noto Serif SC"
+    ]
+  }
+}

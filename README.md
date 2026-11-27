@@ -114,6 +114,12 @@
 
 纸 `#F7F4EE`，墨 `#25211D`，赭 `#994433`。单文件自包含；封面竖排，正文横排。
 
+## 安卓安装包
+
+- 直链：<https://q1z2q3-debug.github.io/daokedao-jiaguwen/dl/daokedao-jiaguwen-v0.80.0.apk>（8.9 MB，零权限、断网可读、宋体字集内置）
+- 校验：`docs/dl/SHA256SUMS.txt`；包名 `com.runze.daokedaojiaguwen`，versionCode 80000。
+- 工程：`dist/apk-jiaguwen/`（`apk-config.json` 驱动，`scripts/build_apk_assets.py` 灌资产，`build.sh` 走 aapt2→d8→apksigner 手工链）。
+
 ## 模型读取
 
 - `llms.txt`：书名、入口、机器可读母本与引用信息。

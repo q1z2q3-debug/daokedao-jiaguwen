@@ -1,2 +1,11 @@
 
 docs/_shots/
+
+# APK 工程
+dist/apk-jiaguwen/build/
+dist/apk-jiaguwen/.debug.keystore
+dist/apk-jiaguwen/app/src/main/assets/
+dist/apk-jiaguwen/.gradle/
+dist/apk-jiaguwen/local.properties
+dist/*.apk
+*.idsig
